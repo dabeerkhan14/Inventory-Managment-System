@@ -19,7 +19,7 @@ public class GlobalExceptionHandler
                 Instant.now(),
                 HttpStatus.CONFLICT.value(),
                 "Duplicate Email",
-                "Cannot create business with already existing Email",
+                exception.getMessage(),
                 request.getDescription(false)
         );
         return new ResponseEntity<>(errorResponse, HttpStatus.CONFLICT);
@@ -31,7 +31,7 @@ public class GlobalExceptionHandler
                 Instant.now(),
                 HttpStatus.BAD_REQUEST.value(),
                 "Invalid Request",
-                "All fields must be properly filled",
+                exception.getMessage(),
                 request.getDescription(false)
         );
         return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);

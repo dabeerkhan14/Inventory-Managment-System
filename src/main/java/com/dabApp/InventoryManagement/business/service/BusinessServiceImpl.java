@@ -6,7 +6,6 @@ import com.dabApp.InventoryManagement.business.entity.Business;
 import com.dabApp.InventoryManagement.business.exception.DuplicateEmailException;
 import com.dabApp.InventoryManagement.business.repository.BusinessRepository;
 import com.dabApp.InventoryManagement.mapper.BusinessMapper;
-import org.mapstruct.factory.Mappers;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.stereotype.Service;
 
